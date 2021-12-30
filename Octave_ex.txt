@@ -1,0 +1,73 @@
+octave:2> x = [1; 2; 3]
+x =
+
+   1
+   2
+   3
+
+octave:3> outer_x = x*transpose(x)
+outer_x =
+
+   1   2   3
+   2   4   6
+   3   6   9
+
+octave:4> rank(outer_x)
+ans = 1
+octave:5> x = [1, 2, 3;4, 5, 6]
+x =
+
+   1   2   3
+   4   5   6
+
+octave:6> xtx = transpose(x)*x
+xtx =
+
+   17   22   27
+   22   29   36
+   27   36   45
+
+octave:7> ev_xxt = eig(xxt)
+error: 'xxt' undefined near line 1, column 1
+octave:8> [v, s] = eig(xxt_
+> > [v, s] = eig(xxt)
+error: parse error:
+
+  syntax error
+
+>>> [v, s] = eig(xxt)
+    ^
+octave:8> ev_xtx = eig(xtx)
+ev_xtx =
+
+  -2.7652e-15
+   5.9733e-01
+   9.0403e+01
+
+octave:9> ev_xxt = eig(xxt)
+error: 'xxt' undefined near line 1, column 1
+octave:10> ev_xxt = eig(xtx)
+ev_xxt =
+
+  -2.7652e-15
+   5.9733e-01
+   9.0403e+01
+
+octave:11> [u, s, v]= svd(x)
+u =
+
+  -0.3863  -0.9224
+  -0.9224   0.3863
+
+s =
+
+Diagonal Matrix
+
+   9.5080        0        0
+        0   0.7729        0
+
+v =
+
+  -0.4287   0.8060   0.4082
+  -0.5663   0.1124  -0.8165
+  -0.7039  -0.5812   0.4082
